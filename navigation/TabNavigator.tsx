@@ -10,14 +10,45 @@ import { HabitsScreen } from '../src/screens/HabitsScreen';
 import { TasksScreen } from '../src/screens/TasksScreen';
 import { PointsScreen } from '../src/screens/PointsScreen';
 
-// #3 Creamos la constante receptora de -createBottomTabNavigator-
+// #3 Importamos el lugar de extracción de los iconos
+import Icon from 'react-native-vector-icons/Ionicons';
+
+// #4 Creamos la constante receptora de -createBottomTabNavigator-
 const Tab = createBottomTabNavigator();
 
 export const TabNavigator = () => {
   return (
-    // #4 Abrimos el Tab.Navigator
-    <Tab.Navigator>
-      {/* #5 Generamos las Screens */}
+    // #5 Abrimos el Tab.Navigator
+    <Tab.Navigator
+
+      screenOptions={ ({ route }) => ({
+
+        // #6 Se genera la pripiedad tabBarIcon con una arrowFunction
+        tabBarIcon: ({ focused, color, size }) => {
+          // #7 Se crea variable que alamcena el nombre del Icono en cuestion
+          let nameIcon='';
+
+          // #8 Generamos un switch que, en base al nombre rescatado de la screen, establece un nombre de icono u otro
+          switch(route.name){
+            case 'Proyectos':
+              nameIcon = focused ? 'create' : 'create-outline';
+            break;
+            case 'Habitos':
+              nameIcon = focused ? 'trophy' : 'trophy-outline';
+            break;
+            case 'Tareas':
+              nameIcon = focused ? 'checkmark-circle' : 'checkmark-circle-outline';
+            break;
+            case 'Productividad':
+              nameIcon = focused ? 'podium' : 'podium-outline';
+            break;
+          }
+          return <Icon name={ nameIcon } color={ color } size={ size } />
+        }
+      })}
+    
+    >
+      {/* #9 Generamos las Screens */}
         {/* Screen Proyectos */}
       <Tab.Screen 
         name='Proyectos' 
@@ -26,7 +57,7 @@ export const TabNavigator = () => {
       />
         {/* Screen Habitos */}
       <Tab.Screen 
-        name='Hábitos' 
+        name='Habitos' 
         component={ HabitsScreen } 
         options={{ tabBarLabel: 'Hábitos' }}
       />
