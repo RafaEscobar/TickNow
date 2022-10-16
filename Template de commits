@@ -1,0 +1,30 @@
+### Commit común:
+Título: ( Inicio, Avance, Elimicación, Cierre )
+ -> Elimicación (NomArchivo)
+Mensaje: ( "entre 4-5 palabras" )
+Nota: < entre 3-4 palabras >
+--------------------------------------------------------------
+|| "Titulo, Mensaje, <Nota>" ||
+"Avance, creación  de screen info"
+"Avance, agregando estilos a screen info, <revisar título>"
+--------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+### Commit Issues:
+Título: ( Issues, Deadly problem ) 
+Ubicación: ( InfoScreen.tsx <- ejemplo )
+Descripción: < entre 8-9 palabras >
+--------------------------------------------------------------
+|| "Titulo, Ubicación, <Descripción>" ||
+"Issue, SocialScreen.tsx, <Error al abrir links a redes sociales>"
+"Deadly problem, AvanceScreen.tsx, <No avanza el slider>"
+--------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+### Commit X -> Que no conllevan nada referente al código o funcionalidad del proyecto
+Título: ( Add, Actualización )
+Nota: < entre 3-4 palabras >
+--------------------------------------------------------------
+|| "Titulo, <Nota>" ||
+"Actualización, Agregando README.txt"
+"Actualización, Editando README.txt, <Se modificó el encabezado del readme>"
