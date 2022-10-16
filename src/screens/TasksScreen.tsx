@@ -1,10 +1,23 @@
 import React from 'react'
-import { View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
 export const TasksScreen = () => {
   return (
-    <View>
-
+    <View style={ styles.container }>
+      <Text style={ styles.title }>Tareas...</Text>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'black',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 25,
+    color: 'white',
+  }
+});
