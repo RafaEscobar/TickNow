@@ -1,5 +1,4 @@
 import React from 'react'
-import { View } from 'react-native'
 
 // #1 Importamos el -createDrawerNavigator-
 import { createDrawerNavigator } from '@react-navigation/drawer'

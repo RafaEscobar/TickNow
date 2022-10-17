@@ -1,16 +1,17 @@
 
 import React from 'react'
-import { View } from 'react-native';
 import { DrawerNavigator } from './navigation/DrawerNavigator';
 
 // #1 Importamos el -react-native-gesture-handler-
 import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 
 export const App = () => {
   return (
-    <View>
+    <NavigationContainer>
       {/* Llamado del DrawerNavigator */}
       <DrawerNavigator />
-    </View>
+    </NavigationContainer>
+    
   )
 }
