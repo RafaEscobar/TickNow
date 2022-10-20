@@ -12,15 +12,18 @@ import { PointsScreen } from '../src/screens/PointsScreen';
 // #3 Importamos el lugar de extracción de los iconos
 import Icon from 'react-native-vector-icons/Ionicons';
 
+// #11 Importamos hook -useNavigation-
 import { useNavigation } from '@react-navigation/native';
+// #12 Importamos el -DrawerActions- para poder llamar manualmente* al Drawer
 import { DrawerActions } from '@react-navigation/native';
-
+// #13 Importamos el btn -TouchableOpacity- que ejecutara la accion de llamar al Drawer 
 import { TouchableOpacity } from 'react-native';
 
 // #4 Creamos la constante receptora de -createBottomTabNavigator-
 const Tab = createBottomTabNavigator();
 
 export const TabNavigator = () => {
+  // #14 Declaramos la constante de control pare el -useNavigation-
   const navigatio = useNavigation();
   return (
     // #5 Abrimos el Tab.Navigator
@@ -60,9 +63,12 @@ export const TabNavigator = () => {
           tabBarLabel: "Proyectos",
           title: 'Proyectos',
           headerShown: true,
+          // #15 Declaramos la propiedad -headerLeft- para retornar "algo" del lado derecho EN la cabecera
           headerLeft: () => {
             return (
+              // #16 Generamos el -TouchableOpacity- el cual en el evento -onPress- llamara por medio de la constante al DrawerActions.openDrawer
               <TouchableOpacity onPress={()=>navigatio.dispatch(DrawerActions.openDrawer)}>
+                {/* #17 Construimos nuestro icono para el btn del Drawer */}
                 <Icon name='reorder-three' color='dark' size={ 30 } style={{ marginLeft: 10 }} />
               </TouchableOpacity>
             );
