@@ -11,7 +11,7 @@ import { AboutAppPage } from '../src/pages/AboutAppPage'
 import { ContactPage } from '../src/pages/ContactPage'
 
 // #4 Creamos la constante receptora de -createDrawerNavigator-
-const Drawer = createDrawerNavigator();
+export const Drawer = createDrawerNavigator();
 
 export const DrawerNavigator = () => {
   return (

@@ -12,11 +12,16 @@ import { PointsScreen } from '../src/screens/PointsScreen';
 // #3 Importamos el lugar de extracción de los iconos
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import { useNavigation } from '@react-navigation/native';
+import { DrawerActions } from '@react-navigation/native';
+
+import { TouchableOpacity } from 'react-native';
 
 // #4 Creamos la constante receptora de -createBottomTabNavigator-
 const Tab = createBottomTabNavigator();
 
 export const TabNavigator = () => {
+  const navigatio = useNavigation();
   return (
     // #5 Abrimos el Tab.Navigator
     <Tab.Navigator 
@@ -32,13 +37,13 @@ export const TabNavigator = () => {
             nameIcon= focused ? 'create' : 'create-outline';
           break;
           case 'Habitos':
-            nameIcon= focused ? 'checkmark-circle' : 'checkmark-circle-outline';
+            nameIcon= focused ? 'trophy' : 'trophy-outline';
           break;
           case 'Tareas':
             nameIcon= focused ? 'checkmark-circle' : 'checkmark-circle-outline';
           break;
           case 'Productividad':
-            nameIcon= focused ? 'bar-chart' : 'bar-chart-outline';
+            nameIcon= focused ? 'stats-chart' : 'stats-chart-outline';
           break;
         }
         return <Icon name={nameIcon} color={ color } size={ size } />
@@ -53,7 +58,15 @@ export const TabNavigator = () => {
         component={ ProyectsScreen } 
         options={{
           tabBarLabel: "Proyectos",
-          
+          title: 'Proyectos',
+          headerShown: true,
+          headerLeft: () => {
+            return (
+              <TouchableOpacity onPress={()=>navigatio.dispatch(DrawerActions.openDrawer)}>
+                <Icon name='reorder-three' color='dark' size={ 30 } style={{ marginLeft: 10 }} />
+              </TouchableOpacity>
+            );
+          },
         }} 
       /> 
         {/* Screen Habitos */}
@@ -62,6 +75,14 @@ export const TabNavigator = () => {
         component={ HabitsScreen } 
         options={{
           tabBarLabel: 'Hábitos',
+          headerShown: true,
+          headerLeft: () => {
+            return (
+              <TouchableOpacity onPress={()=>navigatio.dispatch(DrawerActions.openDrawer)}>
+                <Icon name='reorder-three' color='dark' size={ 30 } style={{ marginLeft: 10 }} />
+              </TouchableOpacity>
+            );
+          },
         }}
       />
         {/* Screen Tareas */}
@@ -70,6 +91,14 @@ export const TabNavigator = () => {
         component={ TasksScreen } 
         options={{
           tabBarLabel: 'Tareas',
+          headerShown: true,
+          headerLeft: () => {
+            return (
+              <TouchableOpacity onPress={()=>navigatio.dispatch(DrawerActions.openDrawer)}>
+                <Icon name='reorder-three' color='dark' size={ 30 } style={{ marginLeft: 10 }} />
+              </TouchableOpacity>
+            );
+          },
         }}
       />
         {/* Screen Productividad */}
@@ -78,6 +107,14 @@ export const TabNavigator = () => {
         component={ PointsScreen } 
         options={{
           tabBarLabel: 'Productividad',
+          headerShown: true,
+          headerLeft: () => {
+            return (
+              <TouchableOpacity onPress={()=>navigatio.dispatch(DrawerActions.openDrawer)}>
+                <Icon name='reorder-three' color='dark' size={ 30 } style={{ marginLeft: 10 }} />
+              </TouchableOpacity>
+            );
+          },
         }}
       />
     </Tab.Navigator>
