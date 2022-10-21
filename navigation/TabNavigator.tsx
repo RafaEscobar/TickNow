@@ -9,6 +9,9 @@ import { HabitsScreen } from '../src/screens/HabitsScreen';
 import { TasksScreen } from '../src/screens/TasksScreen';
 import { PointsScreen } from '../src/screens/PointsScreen';
 
+// TEST
+import { TestScreen } from '../src/screens/TestScreen';
+
 // #3 Importamos el lugar de extracción de los iconos
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -47,6 +50,9 @@ export const TabNavigator = () => {
           break;
           case 'Productividad':
             nameIcon= focused ? 'stats-chart' : 'stats-chart-outline';
+          break;
+          case 'Agregar':
+            nameIcon = 'add-sharp';
           break;
         }
         return <Icon name={nameIcon} color={ color } size={ size } />
@@ -89,6 +95,14 @@ export const TabNavigator = () => {
               </TouchableOpacity>
             );
           },
+        }}
+      />
+        {/* Screen Add */}
+      <Tab.Screen 
+        name='Agregar' 
+        component={ TestScreen } 
+        options={{
+          headerShown: true,
         }}
       />
         {/* Screen Tareas */}
