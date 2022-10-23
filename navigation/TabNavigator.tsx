@@ -9,8 +9,6 @@ import { HabitsScreen } from '../src/screens/HabitsScreen';
 import { TasksScreen } from '../src/screens/TasksScreen';
 import { PointsScreen } from '../src/screens/PointsScreen';
 
-// TEST
-import { TestScreen } from '../src/screens/TestScreen';
 
 // #3 Importamos el lugar de extracción de los iconos
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -98,13 +96,7 @@ export const TabNavigator = () => {
         }}
       />
         {/* Screen Add */}
-      <Tab.Screen 
-        name='Agregar' 
-        component={ TestScreen } 
-        options={{
-          headerShown: true,
-        }}
-      />
+
         {/* Screen Tareas */}
       <Tab.Screen 
         name='Tareas' 
