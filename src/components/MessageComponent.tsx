@@ -5,8 +5,9 @@ import { Text } from 'react-native-paper';
 export const MessageComponent = ({title}:any) => (
 
     <View style={ styles.container }>
-                <Text style={ styles.title }> { title } </Text>
-            </View>
+        <Text style={ styles.title }> { title } </Text>
+        {/* <OpenSocialComponent url={RGit} iname="logo-octocat">Jola</OpenSocialComponent> */}
+    </View>
 
 )
 
@@ -22,5 +23,6 @@ const styles = StyleSheet.create({
         fontSize: 25,
         color: 'black'
     }
+
 
 });
