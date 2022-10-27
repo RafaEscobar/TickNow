@@ -1,23 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { MessageComponent } from '../components/MessageComponent'
 
 export const PointsScreen = () => {
   return (
-    <View style={ styles.container }> 
-      <Text style={ styles.title }>Puntos de productividad...</Text>
-    </View>
+    <MessageComponent title='Puntos de productividad' />
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'black',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 25,
-    color: 'white',
-  }
-});
