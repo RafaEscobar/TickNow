@@ -2,24 +2,13 @@ import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native';
 import { Text } from 'react-native-paper';
 
-interface MyTitle{
-    title: string,
-}
+export const MessageComponent = ({title}:any) => (
 
-export class MessageComponent extends Component < MyTitle > {
-
-    constructor(props: any){
-        super(props);   
-    }
-
-    render(){
-        return(
-            <View style={ styles.container }>
-                <Text style={ styles.title }> { this.props.title } </Text>
+    <View style={ styles.container }>
+                <Text style={ styles.title }> { title } </Text>
             </View>
-        )
-    }
-}
+
+)
 
 const styles = StyleSheet.create({
 
