@@ -9,6 +9,7 @@ import { TabNavigator } from './TabNavigator'
 // #3 Importamos todas las pages
 import { AboutAppPage } from '../src/pages/AboutAppPage'
 import { ContactPage } from '../src/pages/ContactPage'
+import { Text } from 'react-native'
 
 // #4 Creamos la constante receptora de -createDrawerNavigator-
 export const Drawer = createDrawerNavigator();
@@ -16,7 +17,9 @@ export const Drawer = createDrawerNavigator();
 export const DrawerNavigator = () => {
   return (
     // #5 Abrimos el Drawer.Navigator
+    
     <Drawer.Navigator>
+      
       {/* #6 Generamos las SCREENS de enlaces a las pages */}
       <Drawer.Screen 
         name='Proyectos'

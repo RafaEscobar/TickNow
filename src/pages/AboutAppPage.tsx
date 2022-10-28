@@ -11,7 +11,6 @@ export const AboutAppPage = () => {
         <Text style={ styles.text }>SO requerido Android 4.1 y posteriores</Text>
         <Text style={ styles.text }>Desarrollado por ARA Projects</Text>
       </View>
-
     </View>
   )
 }
@@ -34,6 +33,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 15,
     marginBottom: 15,
-  }
-
+  },
+  
 });
