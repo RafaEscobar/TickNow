@@ -4,6 +4,36 @@ import { MessageComponent } from '../components/MessageComponent';
 
 export const AboutAppPage = () => {
   return (
-    <MessageComponent title="Acerca de la app..." />
+    <View style={ styles.container }>
+      <View style={ styles.box }>
+        <Text style={styles.title}>App Info</Text>
+        <Text style={ styles.text }>Versión 0.0.0</Text>
+        <Text style={ styles.text }>SO requerido Android 4.1 y posteriores</Text>
+        <Text style={ styles.text }>Desarrollado por ARA Projects</Text>
+      </View>
+
+    </View>
   )
 }
+
+const styles = StyleSheet.create({
+
+  container:{
+    flex: 1,
+    backgroundColor: 'white',
+  },
+  box: {
+    left: 30,
+    top: 15,
+  },
+  title: {
+    fontSize: 25,
+    marginBottom: 20,
+    fontWeight: 'bold',
+  },
+  text: {
+    fontSize: 15,
+    marginBottom: 15,
+  }
+
+});
