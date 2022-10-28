@@ -3,9 +3,9 @@ import { Text, View, StyleSheet } from 'react-native';
 import { MessageComponent } from '../components/MessageComponent';
 import { OpenSocialComponent } from '../components/OpenSocialComponent';
 
-const RInstagrama = "https://z-p15.www.instagram.com/accounts/login/";
-const RGit = "https://github.com/login/";
-const RFacebook = "https://es-la.facebook.com/";
+const RInstagrama = "https://www.instagram.com/projects_ara?r=nametag";
+const RGit = "https://github.com/RafaEscobar/TickNow.git";
+const RFacebook = "https://www.facebook.com/profile.php?id=100087440973879";
 
 export const ContactPage = () => {
   return (
